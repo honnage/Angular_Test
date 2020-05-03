@@ -1,0 +1,23 @@
+<htnl>
+    <head>
+        <script src="angular-1.7.9/angular.min.js"></script>
+        <script>
+            var app = angular.module('myApp',[]);
+            app.controller('TestController', function($scope){
+                $scope.message = "Node.JS";
+                $scope.msg = "Hello AngularJS";
+        
+            });
+        </script>
+    </head>
+
+    <bodb>
+        <div ng-app="myApp">
+            <div ng-controller="TestController">
+               <div>Message = {{ message}}</div> 
+               <div>{{ msg }}</div>
+            </div>
+        </div>
+    </bodb>
+    
+</htnl>
