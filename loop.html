@@ -14,14 +14,19 @@
             id: 103,
             name: 'PHP OOP',
             price: 450
-        }, ];
+        }];
 
+        angular.forEach($scope.books, function(item) {
+            if (item.price == 400) {
+                item.bgColor = 'red';
+            }
+        });
     });
 </script>
 
 <div ng-app="myapp">
     <div ng-controller="MyController">
-        <div ng-repeat="item in books">
+        <div ng-repeat="item in books" style="background: {{ item.bgColor}}">
             {{ item.id }} {{ item.name }} {{ item.price }}
         </div>
     </div>
